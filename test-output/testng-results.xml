@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="20" total="21" passed="1" failed="0" skipped="0">
+<testng-results ignored="22" total="23" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-03T03:52:40 PST" name="Default suite" finished-at="2023-01-03T03:52:53 PST" duration-ms="13050">
+  <suite started-at="2023-01-05T15:29:45 PST" name="Default suite" finished-at="2023-01-05T15:30:20 PST" duration-ms="34789">
     <groups>
     </groups>
-    <test started-at="2023-01-03T03:52:40 PST" name="Default test" finished-at="2023-01-03T03:52:53 PST" duration-ms="13050">
+    <test started-at="2023-01-05T15:29:45 PST" name="Default test" finished-at="2023-01-05T15:30:20 PST" duration-ms="34789">
       <class name="testPage.HomepageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testPage.HomepageTest@1b11171f]" started-at="2023-01-03T03:52:40 PST" name="setUp" finished-at="2023-01-03T03:52:49 PST" duration-ms="9189" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testPage.HomepageTest@4d5650ae]" started-at="2023-01-05T15:29:45 PST" name="setUp" finished-at="2023-01-05T15:29:54 PST" duration-ms="9024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="role3_use_of_cssSelector_as_locator_searchIconCart()[pri:0, instance:testPage.HomepageTest@1b11171f]" started-at="2023-01-03T03:52:49 PST" name="role3_use_of_cssSelector_as_locator_searchIconCart" finished-at="2023-01-03T03:52:53 PST" duration-ms="3498" status="PASS">
+        <test-method signature="Use_of_clear_method_in_searchEngine1()[pri:0, instance:testPage.HomepageTest@4d5650ae]" started-at="2023-01-05T15:29:54 PST" name="Use_of_clear_method_in_searchEngine1" finished-at="2023-01-05T15:30:19 PST" duration-ms="25268" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- role3_use_of_cssSelector_as_locator_searchIconCart -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:testPage.HomepageTest@1b11171f]" started-at="2023-01-03T03:52:53 PST" name="tearUp" finished-at="2023-01-03T03:52:53 PST" duration-ms="288" status="PASS">
+        </test-method> <!-- Use_of_clear_method_in_searchEngine1 -->
+        <test-method is-config="true" signature="tearUp()[pri:0, instance:testPage.HomepageTest@4d5650ae]" started-at="2023-01-05T15:30:19 PST" name="tearUp" finished-at="2023-01-05T15:30:20 PST" duration-ms="373" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->

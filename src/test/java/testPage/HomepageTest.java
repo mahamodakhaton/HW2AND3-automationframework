@@ -3,11 +3,13 @@ package testPage;
 import java.awt.Checkbox;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.Test;
 
 import baseUtil.BaseClass;
+import net.bytebuddy.asm.Advice.Enter;
 
 // Number Two Home Work(*****************************************************)
 
@@ -72,7 +74,7 @@ public class HomepageTest extends BaseClass {
 		driver.findElement(By.cssSelector("span.font__fifty.color__text-blue")).click();
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void role3_use_of_cssSelector_as_locator_searchIconCart() {
 		driver.findElement(By.cssSelector("span.icon.icon__cart")).click();
 	}
@@ -139,6 +141,28 @@ public class HomepageTest extends BaseClass {
 		
 		
 	}
+	@Test(enabled = true)
+	public void Use_of_clear_method_in_searchEngine1() throws InterruptedException {
+		driver.findElement(By.id("ntt-placeholder")).sendKeys("Cosmetics",Keys.ENTER);
+		Thread.sleep(5000);
+		driver.findElement(By.id("ntt-placeholder")).clear();
+		Thread.sleep(5000);
+		driver.findElement(By.id ("ntt-placeholder")).sendKeys("Shampoo",Keys.ENTER);
+		Thread.sleep(5000);
 	
 
+}
+	@Test(enabled = false)
+	public void Use_of_navigate_method() throws InterruptedException {
+		Thread.sleep(5000);
+		driver.navigate().to("https://www.walmart.com");
+		Thread.sleep(5000);
+		driver.navigate().back();
+		Thread.sleep(5000);
+		driver.navigate().forward();
+		Thread.sleep(5000);
+		driver.navigate().refresh();
+		Thread.sleep(5000);
+		
+}
 }
