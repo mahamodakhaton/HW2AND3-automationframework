@@ -1,26 +1,27 @@
 package baseUtil;
 
+
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.Homepage;
 import utils.Configuration;
+import static utils.IConstant.*;
 
 public class BaseClass {
 
 	public WebDriver driver;
 	public Homepage homepage;
-	Configuration configuration;
+	Configuration config;
+	
 
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws IOException{
 
 		// system is a class and setProperty is a method //ist way to show the locator
 		// of chrom driver //This is absolute path
@@ -82,25 +83,29 @@ public class BaseClass {
 
 		// **************************************//
 
-		WebDriverManager.chromedriver().driverVersion("108.0539.22").setup();
-		driver = new ChromeDriver();
+		// WebDriverManager.chromedriver().driverVersion("108.0539.22").setup();
+		// driver = new ChromeDriver();
 		// WebDriverManager.firefoxdriver().setup();
 		// driver = new FirefoxDriver();
 		// WebDriverManager.edgedriver().setup();
 		// driver = new EdgeDriver();
 		// *******************************//
 
-		 //WebDriverManager.chromedriver().setup();
-		 //driver = new ChromeDriver();
+		// WebDriverManager.chromedriver().setup();
+		// driver = new ChromeDriver();
 
-		 //System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
-		 //driver = new ChromeDriver();
+		System.setProperty("WebDriver.chrome.driver", "./driver/chromedriver.exe");
+		driver = new ChromeDriver();
+		config = new Configuration();
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.get("https://www.walgreens.com/");
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		//driver.get("https://www.walgreens.com/");
+		driver.get(config.getProperty((URL)));
+		long pageLoad= Long.parseLong(config.getProperty((PAGELOAD_WAIT)));
+		long implicitly= Long.parseLong(config.getProperty((IMPLICITLY_WAIT)));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(pageLoad));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitly));
 		homepage = new Homepage(driver);
 	}
 

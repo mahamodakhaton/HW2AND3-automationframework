@@ -1,27 +1,25 @@
 package testPage;
 
-import java.awt.Checkbox;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.Test;
 
 import baseUtil.BaseClass;
-import net.bytebuddy.asm.Advice.Enter;
 
 // Number Two Home Work(*****************************************************)
 
 public class HomepageTest extends BaseClass {
 	private String checkboxselected;
 
-	@Test(enabled = false)
+	@Test(enabled = false, priority = 1)
 	public void sendkeyssearch() throws InterruptedException {
 		homepage.sendkeysinsearcchelement();
 	}
 
-	@Test(enabled = false, priority = 1)
+	@Test(enabled = true, priority = 2)
 	public void clickAccountTest() throws InterruptedException {
 		homepage.clickAccount();
 	}
@@ -141,7 +139,7 @@ public class HomepageTest extends BaseClass {
 		
 		
 	}
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void Use_of_clear_method_in_searchEngine1() throws InterruptedException {
 		driver.findElement(By.id("ntt-placeholder")).sendKeys("Cosmetics",Keys.ENTER);
 		Thread.sleep(5000);

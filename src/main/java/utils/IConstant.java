@@ -2,15 +2,15 @@ package utils;
 
 public interface IConstant {
 	String URL = "url";
-	String Pageload_waite = "pageload_wait";
-	String Implicitly_waite = "implicitly_wait";
-	String Explicity_waite = "explicitly_wait";
-	String browserString = "browser";
+	String PAGELOAD_WAIT = "pageload_wait";
+	String IMPLICITLY_WAIT = "implicitly_wait";
+	String EXPLICITLY_WAIT = "explicitly_wait";
+	String BROWSER = "browser";
 	
-	String ChromeString = "chrome";
-	String FireFoxString = "firefox";
-	String EdgeString = "edge";
-	String Safari = "safari";
+	String CHROME = "chrome";
+	String FIREFOX = "firefox";
+	String EDGE = "edge";
+	String SAFARI = "safari";
 	
 			
 

@@ -2,20 +2,20 @@
 <testng-results ignored="22" total="23" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-05T15:29:45 PST" name="Default suite" finished-at="2023-01-05T15:30:20 PST" duration-ms="34789">
+  <suite started-at="2023-01-06T02:37:50 PST" name="Default suite" finished-at="2023-01-06T02:38:02 PST" duration-ms="11827">
     <groups>
     </groups>
-    <test started-at="2023-01-05T15:29:45 PST" name="Default test" finished-at="2023-01-05T15:30:20 PST" duration-ms="34789">
+    <test started-at="2023-01-06T02:37:50 PST" name="Default test" finished-at="2023-01-06T02:38:02 PST" duration-ms="11827">
       <class name="testPage.HomepageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testPage.HomepageTest@4d5650ae]" started-at="2023-01-05T15:29:45 PST" name="setUp" finished-at="2023-01-05T15:29:54 PST" duration-ms="9024" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testPage.HomepageTest@4d5650ae]" started-at="2023-01-06T02:37:51 PST" name="setUp" finished-at="2023-01-06T02:37:59 PST" duration-ms="8234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Use_of_clear_method_in_searchEngine1()[pri:0, instance:testPage.HomepageTest@4d5650ae]" started-at="2023-01-05T15:29:54 PST" name="Use_of_clear_method_in_searchEngine1" finished-at="2023-01-05T15:30:19 PST" duration-ms="25268" status="PASS">
+        <test-method signature="clickAccountTest()[pri:2, instance:testPage.HomepageTest@4d5650ae]" started-at="2023-01-06T02:37:59 PST" name="clickAccountTest" finished-at="2023-01-06T02:38:02 PST" duration-ms="3241" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Use_of_clear_method_in_searchEngine1 -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:testPage.HomepageTest@4d5650ae]" started-at="2023-01-05T15:30:19 PST" name="tearUp" finished-at="2023-01-05T15:30:20 PST" duration-ms="373" status="PASS">
+        </test-method> <!-- clickAccountTest -->
+        <test-method is-config="true" signature="tearUp()[pri:0, instance:testPage.HomepageTest@4d5650ae]" started-at="2023-01-06T02:38:02 PST" name="tearUp" finished-at="2023-01-06T02:38:02 PST" duration-ms="272" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
