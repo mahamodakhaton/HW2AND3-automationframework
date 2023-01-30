@@ -1,12 +1,14 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import static common.CommonAction.*;
+import org.openqa.selenium.devtools.v105.input.Input;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import static common.CommonActions.*;
 
-import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
+import java.net.PasswordAuthentication;
 
 public class Homepage {
 
@@ -16,6 +18,8 @@ public class Homepage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	
 
 	@FindBy(id = "ntt-placeholder")
 	WebElement searchbox;
@@ -25,6 +29,7 @@ public class Homepage {
 		Thread.sleep(5000);
 
 	}
+	
 
 	@FindBy(xpath = "//input[@name='Ntt']")
 	WebElement searchnameElement;
@@ -86,9 +91,10 @@ public class Homepage {
 		searchEmailElement.click();
 		Thread.sleep(5000);
 	}
-	// Display enable button(**********************************************************)
+	// Display enable
+	// button(**********************************************************)
 
-	@FindBy(xpath = "//strong[text()='Account']") 
+	@FindBy(xpath = "//strong[text()='Account']")
 	WebElement Account;
 
 	public void clickAccount() throws InterruptedException {
@@ -108,50 +114,113 @@ public class Homepage {
 	@FindBy(css = "input#ShowCharacter")
 	WebElement displayedshowenablpassword;
 
-	
 	public void displayedenableShowPassword() throws InterruptedException {
 		displayedshowenablpassword.isEnabled();
 		Thread.sleep(5000);
 	}
-	
-	// Display Selected in Checkbox (****************************************************)
-	
+
+	// Display Selected in Checkbox
+	// (****************************************************)
+
 	@FindBy(xpath = "//strong[text()='Account']") // 1
 	WebElement Account1;
 
 	public void clickAccount1() throws InterruptedException {
-		Account1.click();
+		Account.click();
 		Thread.sleep(3000);
 
-}
+	}
+    			
 	@FindBy(id = "pf-dropdown-signin")
 	WebElement clickSigningeElement1;
+	
 
 	public void clickSigningElement1() throws InterruptedException {
-		clickSigningeElement1.click();
+		clickSigningeElement.click();
 		Thread.sleep(5000);
-}
-	@FindBy(name ="showPassword")
+	}
+
+	@FindBy(name = "showPassword")
 	WebElement checkselectbox;
+	private WebElement logo;
+	
+
 	public void checkselectbox() throws InterruptedException {
 		checkselectbox.click();
 		Thread.sleep(5000);
-		
+
 	}
-	@FindBy(css = "span.icon.icon__wag-corner-flag")
-	 WebElement logo;
-	 public boolean logoDisplayed() {
-		 boolean Star = logo.isDisplayed();
-		 System.out.println("The logo is Displayed?Ans:" + Star);
+
+	@FindBy(css = "span.icon.icon__wag-corner-flag")	
+	public boolean logoDisplayed() {
+		boolean Star = logo.isDisplayed();
+		System.out.println("The logo is Displayed?Ans:" + Star);
 		return Star;
+
+	}
+	
+	@FindBy(xpath = "//input[@id='user_name']")
+	WebElement emailElement;	
+	private void inputEmail() throws InterruptedException{
+		inputtext(emailElement,"maha@gmail");
+		Thread.sleep(3000);
+	}
+	
+	@FindBy(xpath = "//input[@id='user_password']")
+	WebElement passWordElement;
+	private void inputPassword() throws InterruptedException{
+	inputtext(passWordElement, "m1234");
 		
 	}
+				
+	@FindBy (id = "submit_btn")
+	WebElement signInElement;		
+	private void clickSignIn() throws InterruptedException{
+	clickelement(signInElement);
 		
+	}
+	
+	
+
+	public void signInAccountWithWrongCredentials() throws InterruptedException {
+		clickAccount();
+		clickSigningElement();
+		inputEmail();
+		inputPassword();
+		clickSignIn();
 		
-		
+	
+
+	}
+	
 
 	
-		
 
+	// test logger is not correct
+	@FindBy(css = "//strong[text()='Account wrong']")
+	WebElement wrongAccountElement;
+
+	public void loggerNegativemethod() throws InterruptedException {
+		inputtext(Account, "//strong[text()='Account']");
+		Thread.sleep(5000);
+		inputtext(clickSigningeElement, "pf-dropdown-signin");
+		clickelement(checkselectbox);
+		Thread.sleep(5000);
+
+	}
+	@FindBy(xpath = "//strong[text()='Account']")
+	WebElement homepageAccountButton;
+	public void HomepageAccountClickButton () throws InterruptedException {
+		homepageAccountButton.click();
+		Thread.sleep(5000);
 		
 	}
+
+	public void InputTextInAccountandSigningThenClickSelectBox1() {
+		WebElement homepageAccountElement;
+		
+	}
+
+	 
+
+}

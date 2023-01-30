@@ -5,10 +5,8 @@
     <classes>
       <class name="testPage.HomepageTest">
         <methods>
-          <include name="clickAccountTest"/>
+          <include name="loggerPositiveTest"/>
           <include name="tearUp"/>
-          <include name="sendkeyssearch"/>
-          <include name="use_of_getCurrentURL_method"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- testPage.HomepageTest -->
